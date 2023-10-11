@@ -1,0 +1,33 @@
+<nav>
+    <ul>
+        <li><a href="#platoDelDia">Platos del día</a></li>
+        <li><a href="#entrada">Entradas</a></li>
+        <li><a href="#carne">Carnes</a></li>
+        <li><a href="#pasta">Pastas</a></li>
+        <li><a href="#verdura">Con verduras</a></li>
+        <li><a href="#bebidaConAlcohol">Bebidas alcoholicas</a></li>
+        <li><a href="#bebidaSinAlcohol">Bebidas no alcoholicas</a></li>
+        <li><a href="#postre">Postres</a></li>
+    </ul>
+</nav>
+
+<ul>
+    {{#each menu}}
+        <li>
+            <a href="#{{category}}" class="{{#if (eq category ../selectedCategory)}}selected{{/if}}">
+                {{category}}
+            </a>
+        </li>
+    {{/each}}
+</ul>
+    
+{{#each menu}}
+    <h2 id="{{category}}">{{category}}</h2>
+    <ul>
+        {{#each this}}
+            <li>{{name}} - {{description}} - {{price}}</li>
+        {{/each}}
+    </ul>
+{{/each}}
+
+<script src="/js/menuNav.js"></script>

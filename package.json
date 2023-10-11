@@ -1,0 +1,32 @@
+{
+  "name": "menu-restaurante",
+  "version": "0.0.1",
+  "description": "Un ejemplo de un sitio web para un restaurante que muestre las opciones de su menú",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "restaurante",
+    "restaurant",
+    "menu",
+    "practice",
+    "practica"
+  ],
+  "author": "Hernán Diaz",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "commander": "^11.0.0",
+    "connect-mongo": "^5.0.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0"
+  }
+}
