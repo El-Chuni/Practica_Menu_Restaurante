@@ -17,7 +17,26 @@ const getDishesOfTheDay = async () => {
   return platos;
 }
 
-const addDish = async (body) => dishModel.create(body);
+const addDish = async (body) => {
+  try {
+      const imagePath = 'public/media/images/' + req.file.originalname;
+      
+      //Guarda la ruta de la imagen en MongoDB
+      const dishData = {
+          name: req.body.name,
+          description: req.body.description,
+          category: req.body.category,
+          price: req.body.price,
+          portrait: imagePath
+      };
+
+      const createdDish = await dishModel.create(dishData);
+
+      res.json({ success: true, message: 'Plato creado con éxito', dish: createdDish });
+  } catch (error) {
+      res.status(500).json({ success: false, error: error.message });
+  }
+};
 
 const updateDishPrice = async (did, update) => dishModel.findOneAndUpdate({_id: did}, {price: update}, {new: true});
 

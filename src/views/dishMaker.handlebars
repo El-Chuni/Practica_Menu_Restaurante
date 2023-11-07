@@ -1,11 +1,21 @@
 <div>
-    <h3>Ingrese los datos del productos que quiere añadir al menú</h3>
+    <h3>Ingrese los datos del plato/producto que quiere añadir al menú</h3>
     <form id="dishCreation" enctype="multipart/form-data" method="POST">
         <label>Nombre: </label> <input name="name">
         <label>Descripción: </label> <input name="description">
-        <label>Categoria: </label> <input name="category">
+        <label>Categoria: </label>
+        <select name="category">
+            <option value="entrada">Entrada</option>
+            <option value="carne">Carne</option>
+            <option value="pasta">Pasta</option>
+            <option value="verdura">Verdura</option>
+            <option value="bebidaConAlcohol">Bebida con Alcohol</option>
+            <option value="bebidaSinAlcohol">Bebida sin Alcohol</option>
+            <option value="postre">Postre</option>
+        </select>
         <label>Precio: </label> <input name="price">
-        <label>Portada: </label> <input type="file" name="portrait">
+        <label>Portada: </label> <input type="file" name="portrait" accept="image/*">
+        <button type="submit">Agregar plato/producto</button>
     </form>
 </div>
 
