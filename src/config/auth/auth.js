@@ -71,3 +71,13 @@ passport.use(
       }
     )
 );
+
+export const isAuthenticated = (req, res, next) => {
+  //Verifica si el usuario está autenticado
+  if (req.isAuthenticated()) {
+      //Si está autenticado, permite que la solicitud continúe
+      return next();
+  }
+  //Sino se le redirecciona al principio 
+  res.redirect('/');
+};

@@ -16,6 +16,10 @@ export const getMenu = async (req, res) => {
     res.render('menu', {menu, selectedCategory});
 }
 
+export const dishMaker = async (req, res) => {
+    res.render('dishMaker', {});
+}
+
 /*export const getMenuOfTheDay = async (req, res) => {
     let menu = await getDishesOfTheDay();
 
