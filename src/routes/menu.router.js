@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { addDish, getDishById, updateDishPortrait, updateDishPrice } from "../Dao/DB/dishes.service";
-import { dishMaker, getMenu, getMenuOfTheDay, getSpecificMenu } from "../controllers/menu.controller";
+import { addDish, getDishById, updateDishPortrait, updateDishPrice } from "../Dao/DB/dishes.service.js";
+import { dishMaker, getMenu } from "../controllers/menu.controller.js";
 import multer from "multer";
-import { isAuthenticated } from "../config/auth/auth";
+import { isAuthenticated } from "../config/auth/auth.js";
 
 const router = Router();
 
@@ -21,7 +21,7 @@ router.get('/', getMenu);
 
 router.get('/plato/añadirPlato', isAuthenticated, dishMaker);
 
-router.get('/platoDelDia', getMenuOfTheDay);
+//router.get('/platoDelDia', );
 
 router.get('/plato/:did', getDishById);
 

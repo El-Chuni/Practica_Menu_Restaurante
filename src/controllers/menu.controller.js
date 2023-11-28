@@ -1,4 +1,4 @@
-import { getDishes, getDishesByCategory, getDishesOfTheDay } from "../Dao/DB/dishes.service"
+import { getDishes, getDishesByCategory, getDishesOfTheDay } from "../Dao/DB/dishes.service.js"
 
 
 /*export const getMenu = async (req, res) => {

@@ -4,6 +4,7 @@
   "description": "Un ejemplo de un sitio web para un restaurante que muestre las opciones de su menú",
   "main": "./src/app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -27,8 +28,11 @@
     "mongoose": "^7.5.0",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.7",
+    "nodemon": "^3.0.1",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0"
-  }
+  },
+  "type": "module",
+  "description": ""
 }
