@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+header, footer {
+    background-color: #b52020;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #f8f8f8;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.selected {
+    font-weight: bold;
+    color: #b52020;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+h2 {
+    color: #b52020;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Agregar estilos para los enlaces dentro de los menús */
+nav a, ul a {
+    color: #b52020;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, ul a:hover {
+    color: #e07c10; /* Amarillo con toque de naranja */
+}
+
+/* Agregar estilos para los enlaces dentro de los menús seleccionados */
+.selected a {
+    color: #e07c10; /* Amarillo con toque de naranja */
+}
+
