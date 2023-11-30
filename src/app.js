@@ -1,4 +1,5 @@
 import express from "express";
+import session from "express-session";
 import Handlebars from 'express-handlebars';
 import menuRouter from './routes/menu.router.js';
 import userRouter from './routes/users.router.js';
@@ -7,9 +8,10 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import MongoStore from 'connect-mongo';
 import config from "./config/config.js";
+import { __dirname } from "./utils.js";
 
 const app = express();
-const SERVER_PORT = 8080;
+const SERVER_PORT = config.port;
 
 const server = app.listen(SERVER_PORT, () => {
     console.log('Server iniciado.');

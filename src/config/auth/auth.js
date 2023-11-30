@@ -1,9 +1,9 @@
 import passport from "passport";
 import userModel from "../../Dao/DB/models/users.js";
 
-const localStrategy = require('passport-local').Strategy;
-const JWTstrategy = require('passport-jwt').Strategy;
-const ExtractJWT = require('passport-jwt').ExtractJwt;
+import { Strategy as localStrategy } from 'passport-local';
+import { Strategy as JWTstrategy } from "passport-jwt";
+import { ExtractJwt as ExtractJWT } from "passport-jwt";
 
 passport.use(
     'signup',
