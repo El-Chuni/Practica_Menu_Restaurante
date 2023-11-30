@@ -9,11 +9,15 @@ import { getDishes, getDishesByCategory, getDishesOfTheDay } from "../Dao/DB/dis
 
 //export const getSpecificMenu = async (req, res) => {
 export const getMenu = async (req, res) => {
-    let menu = await getDishes();
-    let category = req.params.category;
-    //let menu = await getDishesByCategory(category);
+    try {
+        let category = req.params.category || 'entrada';
+        let menu = await getDishes();
 
-    res.render('menu', {menu, selectedCategory});
+        res.render('menu', { menu, category });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
 }
 
 export const dishMaker = async (req, res) => {
