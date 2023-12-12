@@ -36,9 +36,13 @@ app.use(session({
     saveUninitialized:true
 }));
 
-app.use('/', menuRouter);
+app.use('/menu', menuRouter);
 app.use('/usuario', userRouter);
 app.use('/nosotros', usRouter);
+
+app.get('/', (req, res) => {
+    res.redirect('/menu/');
+})
 
 const connectMongoDB = async () => {
     try {
