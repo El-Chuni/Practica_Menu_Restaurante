@@ -52,15 +52,30 @@ ul li {
     margin-bottom: 10px;
 }
 
-/* Agregar estilos para los enlaces dentro de los menús */
-nav a, ul a {
+
+nav {
+    text-align: center; /* Para centrar los elementos dentro del nav */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block; /* Para alinear los elementos en la misma línea */
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px; /* Ajusta el margen entre los elementos según sea necesario */
+}
+
+nav a {
     color: #b52020;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 nav a:hover, ul a:hover {
-    color: #e07c10; /* Amarillo con toque de naranja */
+    color: #e07c10; 
 }
 
 /* Agregar estilos para los enlaces dentro de los menús seleccionados */
