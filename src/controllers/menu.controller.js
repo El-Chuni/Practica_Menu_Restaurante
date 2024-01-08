@@ -13,7 +13,7 @@ export const getMenu = async (req, res) => {
         let category = req.params.category || 'entrada';
         let menu = await getDishes();
 
-        res.render('menu', { menu, category });
+        res.render('menu', { menu, category, user: req.user });
     } catch (error) {
         console.error(error);
         res.status(500).send('Internal Server Error');
@@ -21,7 +21,7 @@ export const getMenu = async (req, res) => {
 }
 
 export const dishMaker = async (req, res) => {
-    res.render('dishMaker', {});
+    res.render('dishMaker', {user: req.user});
 }
 
 /*export const getMenuOfTheDay = async (req, res) => {

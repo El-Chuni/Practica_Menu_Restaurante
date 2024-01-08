@@ -14,6 +14,14 @@
 
         <header>
             
+            <div class="user-section">
+                {{#if user}} <!-- Verifica si hay una sesión de usuario -->
+                    <p>Hola {{user.name}}</p>
+                {{else if user !== undefined}}
+                    <a href="/usuario/login">Ingresa</a>
+                    <a href="/usuario/register">Regístrate</a>
+                {{/if}}
+            </div>
         </header>
 
         {{{body}}}

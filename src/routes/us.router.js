@@ -7,13 +7,13 @@ const router = Router();
 
 router.get('/', async (req, res) => {
 
-    res.render("us");
+    res.render("us", {user: req.user});
 })
 
 
 router.get('/contacto', async (req, res) => {
 
-    res.render("contact");
+    res.render("contact", {user: req.user});
 })
 
 router.post('/contacto', sendMailToContact)
