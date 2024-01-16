@@ -17,10 +17,11 @@
             <div class="user-section">
                 {{#if user}} <!-- Verifica si hay una sesión de usuario -->
                     <p>Hola {{user.name}}</p>
-                {{else if user !== undefined}}
+                {{/if}}
+                {{#unless user}}
                     <a href="/usuario/login">Ingresa</a>
                     <a href="/usuario/register">Regístrate</a>
-                {{/if}}
+                {{/unless}}
             </div>
         </header>
 
