@@ -17,6 +17,17 @@ header, footer {
     text-align: center;
 }
 
+header div {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+header div a {
+    text-decoration: none;
+    color: #ececec;
+    text-align: right;
+}
+
 nav {
     background-color: #c27823;
     padding: 10px;
@@ -116,3 +127,7 @@ footer ul a {
     color: #e07c10; /* Amarillo con toque de naranja */
 }
 
+.fondoRegistroEIngreso {
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 20px; 
+}
